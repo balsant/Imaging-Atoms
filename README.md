@@ -1,4 +1,4 @@
-# Ultracold Strontium Atom Counting in a Magneto-Optical Trap (MOT)
+# Ultracold Strontium Atoms Counting in a Magneto-Optical Trap (MOT)
 
 This code is used to calculate the number of ultracold strontium atoms in a Magneto-Optical Trap (MOT) by processing photon counts obtained from a camera. The calculation is based on various physical parameters of the system, such as laser intensity, saturation intensity, and camera properties. The code is designed to run in a loop, continuously updating the number of detected atoms.
 
