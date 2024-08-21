@@ -6,9 +6,9 @@ This code is used to calculate the number of ultracold strontium atoms in a Magn
 
 ### Initialization
 - **Laser and System Parameters**:
-  - `I = 6.37 mW/cm^2`: Laser intensity used in the experiment.
+  - `I = 6.37 mW/cm^2`: Laser intensity used in the experiment (sum total for all six beams in a six-beam MOT).
   - `Is = 42.7 mW/cm^2`: Saturation intensity for the atomic transition.
-  - `G = 32e6 MHz`: Natural linewidth (gamma) of the atomic transition.
+  - `G = 32e6 MHz`: Natural linewidth (gamma) of the atomic transition (for 461-nm).
   - `D = 40e6 MHz`: Detuning of the laser from the atomic resonance.
   - `T = 1.96e-7 s`: Camera exposure time, which can be retrieved dynamically using the `GetExposureTime()` function.
   
@@ -56,5 +56,5 @@ This code is used to calculate the number of ultracold strontium atoms in a Magn
 3. **Monitor the output** to see the real-time atom count and adjust your experimental parameters as necessary.
 
 ## Dependencies
-- This code assumes the use of specific camera (Andor Zyla) and data acquisition functions (`TotalCounts`, `GetExposureTime`, `create`, `run`, `ScaleData`, `update`) which Andor Solis software.
+- This code assumes the use of specific camera (Andor Zyla) and data acquisition functions (`TotalCounts`, `GetExposureTime`, `create`, `run`, `ScaleData`, `update`) in Andor Solis software.
 
