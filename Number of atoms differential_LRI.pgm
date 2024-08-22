@@ -4,7 +4,7 @@ i = 0 // Initialize loop counter
 // Define constants related to the experiment
 I = 6.37 // mW/cm^2, Laser intensity used in the experiment (for LRI ?)
 Is = 42.7 // mW/cm^2, Saturation intensity for the atomic transition
-G = 32e6 // MHz, Natural linewidth (gamma) of the atomic transition
+G = 2 * 3.14 * 32e6 // rad/s, Natural linewidth (gamma) of the atomic transition (converted to angular frequency)
 D = 40e6 // MHz, Detuning of the laser from the atomic resonance (for LRI its 40 MHz)
 T = 1.96e-7 // s, Camera exposure time (can be retrieved with GetExposureTime function)
 
@@ -25,7 +25,7 @@ fr = (r * r) / (4 * R * R) // derived from Omega/4*pi = pi*r^2/4*pi*R^2
 Solid = 4 * R * R / (r * r) // this a factor equals 1/fr, to be multiplied later to calc atom number
 
 // Calculate the photon scattering rate per atom
-P = 0.5 * G * 2 * 3.14 * (I / Is) / (1 + I / Is + (4 * D * D) / (G * G))
+P = 0.5 * G * (I / Is) / (1 + I / Is + (4 * D * D) / (G * G))
 
 // Create a data structure for storing atom numbers (100 points)
 create(#11, 100, 1) // Possibly creating a data table or array
