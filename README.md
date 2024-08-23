@@ -8,7 +8,7 @@ This code is used to calculate the number of ultracold strontium atoms in a Magn
 - **Laser and System Parameters**:
   - `I = 6.37 mW/cm^2`: Laser intensity used in the experiment (sum total for all six beams in a six-beam MOT).
   - `Is = 42.7 mW/cm^2`: Saturation intensity for the atomic transition.
-  - `G = 2π * 32e6 MHz`: Natural linewidth (gamma) of the atomic transition (for 461-nm).
+  - `G = 32e6 MHz`: Natural linewidth (gamma) of the atomic transition (for 461-nm).
   - `D = 40e6 MHz`: Detuning of the laser from the atomic resonance.
   - `T = 1.96e-7 s`: Camera exposure time, which can be retrieved dynamically using the `GetExposureTime()` function.
   
@@ -25,7 +25,7 @@ This code is used to calculate the number of ultracold strontium atoms in a Magn
 
 ### Photon Scattering Rate
 - **Photon Scattering Rate per Atom**:
-  - `P = 0.5 * G * (I / Is) / (1 + I / Is + (4 * D^2) / (G^2))`: Calculates the photon scattering rate per atom based on the laser intensity, detuning, and linewidth.
+  - `P = 0.5 * 2 * 3.14 * G * (I / Is) / (1 + I / Is + (4 * D^2) / (G^2))`: Calculates the photon scattering rate per atom based on the laser intensity, detuning, and linewidth. D/G cancels out 2π factors because to match dimensions.
 
 ### Data Collection Loop
 - The code enters a loop to repeatedly collect and process photon counts:
